@@ -83,11 +83,11 @@ smiley = (weirdInput
 
 for filename in os.listdir(cwd):
   #print(file)
-  if filename.endswith("log"):
+  if filename.endswith("txt"):
     #open file for writing, code it with timestamp to be unique
     #remove . and :from atring
     now = str(datetime.now().time()).replace(':', '').replace('.', '')
-    f_writing = open("hh" + now + ".txt", "w", encoding = "utf-16")
+    f_writing = open("hh" + now + ".log", "w", encoding = "utf-16")
     f_reading = open(filename, "r")
     lines = f_reading.readlines()
     f_reading.close()
